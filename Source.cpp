@@ -17,7 +17,7 @@ Sleep(unsigned long milliseconds)
 __declspec(naked) void LetMeGG()
 {
     _asm {
-		sub rsp, 0x48
+	    sub rsp, 0x48
         mov eax, 0x5
         mov byte ptr ss:[rsp + 0x10], 0x67
         mov byte ptr ss:[rsp + 0x11], 0
@@ -31,9 +31,9 @@ __declspec(naked) void LetMeGG()
         lea rdx, ss:[rsp + 0x20]
         lea rcx, ss:[rsp + 0x30]
         int 0x2D
-		nop
-		add rsp, 0x48
-		ret
+	    nop
+	    add rsp, 0x48
+	    ret
     }
 }
 
